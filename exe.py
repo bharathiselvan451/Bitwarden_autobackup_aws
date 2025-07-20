@@ -21,9 +21,9 @@ print(list[0],list[1],list[2])
 
 url = "https://raw.githubusercontent.com/bharathiselvan451/Bitwarden_autobackup_aws/refs/heads/main/exe.sh"
 r = requests.get(url, allow_redirects=True)
-open('/home/ubuntu/damn.sh', 'wb').write(r.content)
-open('/home/ubuntu/damn.sh', 'wb').write(r.content)
-subprocess.run(["chmod +x /home/ubuntu/damn.sh"],shell=True)
-command = "sudo ./home/ubuntu/damn.sh "+list[2]+" "+list[1]+" "+list[0]
+open('damn.sh', 'wb').write(r.content)
+open('damn.sh', 'wb').write(r.content)
+subprocess.run(["chmod +x damn.sh"],shell=True)
+command = "sudo ./damn.sh "+list[2]+" "+list[1]+" "+list[0]
 print(command)
 subprocess.run([command],shell=True)
