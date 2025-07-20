@@ -3,6 +3,7 @@ export BW_PASSWORD=$1
 export BW_CLIENTSECRET=$2
 export BW_CLIENTID=$3
 source ~/.bashrc
+cd /home/ubuntu
 yes '' | sudo apt-add-repository universe
 sudo apt-get -y install expect
 sudo apt update && apt install -y curl unzip libsecret-1-0 jq
