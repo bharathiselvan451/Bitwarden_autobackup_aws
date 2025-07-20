@@ -12,6 +12,6 @@ curl -LO "https://github.com/bitwarden/clients/releases/download/cli-v{$VER}/bw-
 && unzip *.zip && chmod +x ./bw
 ./bw login --apikey
 expect -c "
-spawn ./bw export --format json
+spawn ./bw export --output /home/ubuntu/exe.json --format json
 expect -nocase \"password:\" {send \"$1\r\"; interact}
 "
