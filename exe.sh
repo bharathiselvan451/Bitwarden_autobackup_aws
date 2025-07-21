@@ -10,6 +10,8 @@ export VER=$(curl -H "Accept: application/vnd.github+json" https://api.github.co
 curl -LO "https://github.com/bitwarden/clients/releases/download/cli-v{$VER}/bw-linux-{$VER}.zip" \
 && unzip *.zip && chmod +x ./bw
 ./bw login --apikey
+echo " fuck this"
+echo " fuck this"
 expect -c "
 spawn ./bw export --format json
 expect -nocase \"password:\" {send \"$1\r\"; interact}
