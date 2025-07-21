@@ -14,6 +14,6 @@ echo " fuck this"
 echo " fuck this"
 expect -c "
 spawn ./bw export --output /home/ubuntu/exe.json --format json
-expect -nocase \"password:\" {send \"$1\r\"; interact}
+expect -nocase \"password:\" {send \"$1\r\"; expect eof}
 "
-expect eof
+
