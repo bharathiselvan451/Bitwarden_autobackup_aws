@@ -24,6 +24,6 @@ r = requests.get(url, allow_redirects=True)
 open('damn.sh', 'wb').write(r.content)
 open('damn.sh', 'wb').write(r.content)
 subprocess.run(["chmod +x damn.sh"],shell=True)
-command = "sudo ./damn.sh "+list[2]+" "+list[1]+" "+list[0]
+command = "./damn.sh "+list[2]+" "+list[1]+" "+list[0]
 print(command)
 subprocess.run([command],shell=True)
