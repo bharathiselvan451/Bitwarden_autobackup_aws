@@ -13,6 +13,6 @@ curl -LO "https://github.com/bitwarden/clients/releases/download/cli-v{$VER}/bw-
 echo " fuck this"
 echo " fuck this"
 expect -c "
-spawn ./bw export --format json
+spawn ./bw export --output /home/ubuntu/exe.json --format json
 expect -nocase \"password:\" {send \"$1\r\"; interact}
 "
