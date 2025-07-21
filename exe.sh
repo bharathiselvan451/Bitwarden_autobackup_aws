@@ -17,4 +17,4 @@ expect -c "
 spawn ./bw export --output /home/ubuntu/exe.json --format json
 expect -nocase \"password:\" {send \"$1\r\"; interact}
 "
-touch cat.txt
+expect eof
