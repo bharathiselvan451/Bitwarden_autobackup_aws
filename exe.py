@@ -20,7 +20,6 @@ get_secret_value_response = client.get_secret_value(
     
 
 secret = get_secret_value_response['SecretString']
-#secret = """{"BW_CLIENTID":"user.f12e44f5-3c0d-458d-9d3e-b0c1013353ac","BW_CLIENTSECRET":"b4z8miqAk13mWewimHx8hkZxW8GXjv","BW_PASSWORD":"Yukinoshita@2002"}"""
 
 split_1 = secret.split(",")
 list=[]
