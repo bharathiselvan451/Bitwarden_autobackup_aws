@@ -1,7 +1,26 @@
 import subprocess
 import requests
+import boto3
+from botocore.exceptions import ClientError
 
-secret = """{"BW_CLIENTID":"user.f12e44f5-3c0d-458d-9d3e-b0c1013353ac","BW_CLIENTSECRET":"b4z8miqAk13mWewimHx8hkZxW8GXjv","BW_PASSWORD":"Yukinoshita@2002"}"""
+
+secret_name = "Bitwarden"
+region_name = "us-east-1"
+
+    # Create a Secrets Manager client
+session = boto3.session.Session()
+client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+get_secret_value_response = client.get_secret_value(
+        SecretId=secret_name
+    )
+    
+
+secret = get_secret_value_response['SecretString']
+#secret = """{"BW_CLIENTID":"user.f12e44f5-3c0d-458d-9d3e-b0c1013353ac","BW_CLIENTSECRET":"b4z8miqAk13mWewimHx8hkZxW8GXjv","BW_PASSWORD":"Yukinoshita@2002"}"""
 
 split_1 = secret.split(",")
 list=[]
