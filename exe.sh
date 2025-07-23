@@ -19,4 +19,4 @@ sudo snap install aws-cli --classic
 json_files=(*.json)
 # Extract only the filenames (without path)
 filenames=( "${json_files[@]##*/}" )
-aws s3 cp $json_files s3://bitwardenandbackup/
+aws s3 cp $json_files s3://bitwardenbackuptodivya/
