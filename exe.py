@@ -2,6 +2,8 @@ import subprocess
 import requests
 import boto3
 from botocore.exceptions import ClientError
+import ast
+
 
 
 secret_name = "Bitwarden"
