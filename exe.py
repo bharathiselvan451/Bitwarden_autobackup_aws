@@ -36,7 +36,7 @@ list =  ast.literal_eval(secret)
 #list[1] = list[1].replace('"', '')
 #list[2] = list[2].replace('"', '')
 
-print(list[0],list[1],list[2])
+#print(list[0],list[1],list[2])
 
 url = "https://raw.githubusercontent.com/bharathiselvan451/Bitwarden_autobackup_aws/refs/heads/main/exe.sh"
 r = requests.get(url, allow_redirects=True)
