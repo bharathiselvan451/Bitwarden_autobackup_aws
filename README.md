@@ -1,6 +1,8 @@
-Automation to export Bitwarden credentials and store them safely using AWS s3.
+Automation to export Bitwarden credentials and store them safely using AWS S3.
 
-To use this project, set the credentials on AWS secrets manager.
+MAINTAIN and DEPLOY the infrastructure using the provided Terraform files.
+
+To use this project, set the credentials on AWS Secrets Manager.
 
 Name the credentials as:
 BW_CLIENTID 
